@@ -1,21 +1,26 @@
 body{
     font-family: 'Big Shoulders Display', cursive;
-    margin-top: 8%;
+    margin: 0;
     font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 h2{
     font-weight: 700;
-    margin: 30px;
     font-size: 35px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 p{
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
-    padding: 25px;
+    /*padding: 25px; */
+    margin: 10px 0;
 }
 .container{
-    margin: 0 auto;
-    width: 60%;
+    padding: 200px;
 }
 .flex{
     display: flex;
@@ -25,47 +30,31 @@ p{
 .text-center{
     text-align:initial;
 }
-.columna-uno{
-    background: hsl(31, 77%, 52%);
+.card{
     color: hsla(0, 0%, 100%, 0.75);
-    border: 1px solid hsl(31, 77%, 52%);
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 5px;
+    /* border: 1px solid hsl(184, 100%, 22%); */
+    padding: 35px;
     box-shadow: 10px 10px 5px #888;
     width: 33%;
-    box-sizing:content-box;
-     
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.columna-uno{
+    background: hsl(31, 77%, 52%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 .columna-dos{
     background: hsl(184, 100%, 22%);
-    color: hsla(0, 0%, 100%, 0.75);
-    border: 1px solid hsl(184, 100%, 22%);
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 10px 10px 5px #888;
-    width: 33%;
-    box-sizing: content-box;
-     
 }
 .columna-tres{
     background: hsl(179, 100%, 13%);
-    color: hsla(0, 0%, 100%, 0.75);
-    border: 1px solid hsl(179, 100%, 13%);
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 10px 10px 5px #888;
-    width: 33%;
-    box-sizing: content-box;
-     
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
-.imagen{
-    margin-top: 25px;
-    margin-left: 25px;
-}
-.btn-learn-more-uno{
+.btn-card{
     text-decoration: none;
     text-align: center;
     background: #fff;
@@ -73,60 +62,62 @@ p{
     padding: 10px;
     border-radius: 20px;
     font-family: 'Lexend Deca', sans-serif;
-    color:hsl(31, 77%, 52%);
-    margin: 10% 10%;
-    
+    margin-top: 60px;
+    max-width: 100px;
 }
-.btn-learn-more-uno:hover{
-    background: rgba(0,0,0,0);
-    color:hsla(0, 0%, 100%, 0.75);
-    box-shadow: inset 0 0 0 3px hsla(0, 0%, 100%, 0.75);
-}
-.btn-learn-more-dos{
-    text-decoration: none;
-    background: #fff;
-    display: inline-block;
-    padding: 10px;
-    border-radius: 20px;
-    font-family: 'Lexend Deca', sans-serif;
-    color:hsl(184, 100%, 22%);
-    margin: 10% 10%;
-}
-.btn-learn-more-dos:hover{
-    background: rgba(0,0,0,0);
-    color:hsla(0, 0%, 100%, 0.75);
-    box-shadow: inset 0 0 0 3px hsla(0, 0%, 100%, 0.75);
-}
-.btn-learn-more-tres{
-    text-decoration: none;
-    background: #fff;
-    display: inline-block;
-    padding: 10px;
-    border-radius: 20px;
-    font-family: 'Lexend Deca', sans-serif;
-    color:hsl(179, 100%, 13%);
-    margin: 10% 10%;
-}
-.btn-learn-more-tres:hover{
-    background: rgba(0,0,0,0);
+.btn-card:hover{
     color:hsla(0, 0%, 100%, 0.75);
     box-shadow: inset 0 0 0 3px hsla(0, 0%, 100%, 0.75);
 }
 
+.btn-learn-more-uno{
+    color:hsl(31, 77%, 52%);
+
+}
+.btn-learn-more-dos{
+    color:hsl(184, 100%, 22%);
+}
+.btn-learn-more-tres{
+    color:hsl(179, 100%, 13%);
+}
+/* hover butons */
+.btn-learn-more-uno:hover{
+    background: rgba(0,0,0,0);
+}
+
+.btn-learn-more-dos:hover{
+    background: rgba(0,0,0,0);
+}
+
+.btn-learn-more-tres:hover{
+    background: rgba(0,0,0,0);
+}
+
 @media (max-width: 750px){
+    body{
+        height: 180vh;
+    }
     .container{
-        width: 50%;
+        width: 100%;
         flex-direction: column;
-        margin: 0 auto;
+        padding: 300px;
     }
     .columna-uno{
-        width: 80%;
+        width: 100%;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0px;
     }
     .columna-dos{
-        width: 80%;
+        width: 100%;
     }
     .columna-tres{
-        width: 80%;
+        width: 100%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 0px;
+    }
+    .btn-card{
+        margin-top: 30px;
     }
 }
 
@@ -134,15 +125,16 @@ p{
     .container{
         width: 100%;
         flex-direction: column;
-        margin: 0 auto;
+        /* margin: 0 auto; */
+        padding: 300px;
     }
     .columna-uno{
-        width: 80%;
+        width: 100%;
     }
     .columna-dos{
-        width: 80%;
+        width: 100%;
     }
     .columna-tres{
-        width: 80%;
+        width: 100%;
     }
 }
