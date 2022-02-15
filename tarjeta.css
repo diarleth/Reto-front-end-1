@@ -1,6 +1,6 @@
 body{
     font-family: 'Big Shoulders Display', cursive;
-    margin: 0;
+    margin: 0 auto;
     font-size: 15px;
     display: flex;
     justify-content: center;
@@ -16,7 +16,6 @@ h2{
 p{
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
-    /*padding: 25px; */
     margin: 10px 0;
 }
 .container{
@@ -25,14 +24,12 @@ p{
 .flex{
     display: flex;
     flex-wrap: nowrap;
-
 }
 .text-center{
     text-align:initial;
 }
 .card{
     color: hsla(0, 0%, 100%, 0.75);
-    /* border: 1px solid hsl(184, 100%, 22%); */
     padding: 35px;
     box-shadow: 10px 10px 5px #888;
     width: 33%;
@@ -95,12 +92,13 @@ p{
 
 @media (max-width: 750px){
     body{
-        height: 180vh;
+        height: 250vh;
     }
     .container{
         width: 100%;
         flex-direction: column;
-        padding: 300px;
+        padding: 250px;
+        box-sizing: border-box;
     }
     .columna-uno{
         width: 100%;
@@ -121,12 +119,13 @@ p{
     }
 }
 
-@media (max-width: 375px){
+@media (max-width: 400px){
     .container{
         width: 100%;
         flex-direction: column;
-        /* margin: 0 auto; */
-        padding: 300px;
+        margin: 0 auto;
+        padding: 120px;
+        box-sizing: border-box;
     }
     .columna-uno{
         width: 100%;
