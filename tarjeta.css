@@ -20,6 +20,7 @@ p{
 }
 .container{
     padding: 300px;
+    /* box-sizing: border-box; */
 }
 .flex{
     display: flex;
@@ -92,13 +93,13 @@ p{
 
 @media (max-width: 750px){
     body{
-        height: 250vh;
+        height: 220vh;
     }
     .container{
         width: 100%;
         flex-direction: column;
-        padding: 250px;
-        box-sizing: border-box;
+        padding: 300px;
+        /* box-sizing: border-box; */
     }
     .columna-uno{
         width: 100%;
@@ -124,8 +125,8 @@ p{
         width: 100%;
         flex-direction: column;
         margin: 0 auto;
-        padding: 120px;
-        box-sizing: border-box;
+        padding: 300px;
+        /* box-sizing: border-box; */
     }
     .columna-uno{
         width: 100%;
